@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lumière — Centro de Estética Premium en Ciudad de México. Faciales, hidratación, radiofrecuencia y masaje Kobido con diagnóstico personalizado desde 2015.">
+  <title>Lumière — Centro de Estética Premium</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Scroll veil blur -->
+  <div class="scroll-veil" id="scrollVeil">
+    <div class="scroll-veil-blur"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       NAV
+  ══════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-links">
+      <a href="#services">Servicios</a>
+      <a href="#gallery">Galería</a>
+    </div>
+    <a href="#" class="logo">Lumière</a>
+    <button class="nav-menu-btn" onclick="openModal()">≡</button>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-noise"></div>
+    <div class="hero-content">
+      <h1 class="hero-headline">
+        <span class="line1">PIEL QUE</span>
+        <span class="line2">NO MIENTE</span>
+      </h1>
+      <p class="hero-sub">No vendemos rutinas. Diseñamos protocolos para tu piel, no para la de alguien más.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       MARQUEE
+  ══════════════════════════════════════ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item">Facial Profundo      <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Hidratación Avanzada <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Peeling Químico      <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Microdermoabrasión   <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Radiofrecuencia      <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Luz Pulsada          <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Mesoterapia          <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Masajes Faciales     <span class="marquee-dot">✦</span></span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item">Facial Profundo      <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Hidratación Avanzada <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Peeling Químico      <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Microdermoabrasión   <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Radiofrecuencia      <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Luz Pulsada          <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Mesoterapia          <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Masajes Faciales     <span class="marquee-dot">✦</span></span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════ -->
+  <section id="about">
+    <p class="section-label reveal">LUMIÈRE · DESDE 2015</p>
+    <h2 class="about-headline reveal">
+      No somos un spa. Somos el lugar al que vas cuando ya probaste todo lo demás
+      y quieres resultados que <span class="accent">duran de verdad</span>.
+    </h2>
+    <p class="about-body reveal">
+      Empezamos en un consultorio pequeño en Polanco con una sola convicción: que la piel sana no necesita capas, necesita diagnóstico. Diez años después seguimos sin vender paquetes genéricos. Cada cliente entra, se sienta y nos cuenta su historia — y desde ahí construimos. Sin protocolos de catálogo, sin promesas vacías.
+    </p>
+
+    <div class="stats-grid reveal">
+      <div class="stat-cell">
+        <div class="stat-number">4,800+</div>
+        <div class="stat-label">Clientes con diagnóstico personalizado</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">Vuelven después de su primera sesión</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">22</div>
+        <div class="stat-label">Protocolos distintos, ninguno genérico</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">9</div>
+        <div class="stat-label">Especialistas con certificación clínica</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SERVICES
+  ══════════════════════════════════════ -->
+  <section id="services">
+    <p class="section-label reveal">LO QUE HACEMOS</p>
+    <p class="services-intro reveal">Cuatro caminos hacia la misma piel: la que siempre tuviste pero que nadie sabía cómo sacar.</p>
+
+    <!-- Filter pills -->
+    <div class="treatments-scroll reveal" style="margin-bottom:40px;">
+      <button class="treatment-pill active">Todos</button>
+      <button class="treatment-pill">Facial</button>
+      <button class="treatment-pill">Anti-edad</button>
+      <button class="treatment-pill">Hidratación</button>
+      <button class="treatment-pill">Tecnología</button>
+      <button class="treatment-pill">Relajación</button>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Card 1 — Facial -->
+      <div class="service-card reveal">
+        <div class="service-img">
+          <img
+            src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80&fit=crop"
+            alt="Facial de diagnóstico — limpieza profunda"
+            loading="lazy">
+        </div>
+        <div class="service-body">
+          <h3 class="service-title">Facial de diagnóstico</h3>
+          <p class="service-desc">Limpieza profunda, extracción y un análisis honesto de lo que tu piel necesita — no lo que está de moda.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 — Hidratación -->
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-img">
+          <img
+            src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80&fit=crop"
+            alt="Hidratación de barrera — sérums activos"
+            loading="lazy">
+        </div>
+        <div class="service-body">
+          <h3 class="service-title">Hidratación de barrera</h3>
+          <p class="service-desc">Cuando la piel pide agua pero lo que necesita es reconstruir. Sérums activos, sin rellenos ni promesas de frasco.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 — Radiofrecuencia -->
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-img">
+          <img
+            src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&q=80&fit=crop"
+            alt="Radiofrecuencia de precisión — colágeno real"
+            loading="lazy">
+        </div>
+        <div class="service-body">
+          <h3 class="service-title">Radiofrecuencia de precisión</h3>
+          <p class="service-desc">Calor controlado que activa colágeno real. El tensor favorito de quienes quieren resultados sin agujas ni tiempo de recuperación.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 — Masaje Kobido -->
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-img">
+          <img
+            src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&q=80&fit=crop"
+            alt="Masaje Kobido — lifting natural japonés"
+            loading="lazy">
+        </div>
+        <div class="service-body">
+          <h3 class="service-title">Masaje Kobido</h3>
+          <p class="service-desc">El lifting que viene de adentro. Una técnica japonesa que redefine el óvalo, descontractura y deja una piel que literalmente brilla.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="btn-center">
+      <a href="#" class="btn-primary" onclick="openModal(); return false;">Ver todos los tratamientos</a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       GALLERY
+  ══════════════════════════════════════ -->
+  <section id="gallery">
+    <div class="gallery-header reveal">
+      <h2 class="gallery-title">Sin filtros.<br>Sin Photoshop.</h2>
+      <a href="#" class="btn-primary" onclick="openModal(); return false;" style="margin-top:0;">Reservar ahora</a>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item">
+        <div class="gallery-item-bg gi-facial"></div>
+        <div class="gallery-caption">Ritual Facial Premium · 90 min</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-item-bg gi-hydra"></div>
+        <div class="gallery-caption">Hidratación Profunda · 60 min</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-item-bg gi-laser"></div>
+        <div class="gallery-caption">Luz Pulsada Intensa · 45 min</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-item-bg gi-massage"></div>
+        <div class="gallery-caption">Masaje Kobido · 75 min</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-item-bg gi-peel"></div>
+        <div class="gallery-caption">Peeling Enzimático · 50 min</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       HIGHLIGHT BANNER
+  ══════════════════════════════════════ -->
+  <div id="highlight" class="reveal">
+    <div class="highlight-cover">
+      <div class="highlight-cover-glow"></div>
+      <div class="highlight-cover-logo">Lumière</div>
+      <div class="highlight-cover-badge">
+        <span>GUÍA 2025</span>
+        El cuidado que mereces
+      </div>
+    </div>
+    <div class="highlight-content">
+      <p class="highlight-eyebrow">DESCARGA GRATUITA</p>
+      <h3 class="highlight-title">GUÍA DE INGREDIENTES<br>QUE SÍ<br>FUNCIONAN</h3>
+      <p class="highlight-body">Retinol con filtro solar, sí. Niacinamida con vitamina C, depende. Todo lo que nadie te explica — sin que te vendan nada.</p>
+      <a href="#" class="btn-primary-light">Descargar gratis</a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════ -->
+  <section id="testimonials">
+    <h2 class="testimonials-title reveal">No lo decimos<br>nosotros</h2>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-quote">"Fui con una lista de productos que usaba y me dijeron que tres de ellos se anulaban entre sí. Nadie me había dicho eso en diez años de gastar en skincare."</p>
+        <p class="testimonial-author">— Valentina R., Polanco</p>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-quote">"No me vendieron el paquete más caro. Me vendieron el que necesitaba. Después de cuatro sesiones de radiofrecuencia, la gente me pregunta si descansé bien — todos los días."</p>
+        <p class="testimonial-author">— Sofía M., Santa Fe</p>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-quote">"El Kobido es lo único que me hace salir sin base. No es exageración — es que después de la sesión mi piel no necesita nada encima."</p>
+        <p class="testimonial-author">— Andrea L., Condesa</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CTA
+  ══════════════════════════════════════ -->
+  <section id="cta">
+    <div class="cta-glow"></div>
+    <div class="cta-wordmark">Lumière</div>
+    <p class="cta-eyebrow">POLANCO · CDMX · DESDE 2015</p>
+    <h2 class="cta-title">HACEMOS UNA<br>SOLA COSA</h2>
+    <p class="cta-sub">Conocer tu piel mejor de lo que la conoces tú — y a partir de ahí, trabajar.</p>
+    <div class="cta-btn">
+      <a href="#" class="btn-primary-light" onclick="openModal(); return false;">Reservar mi cita</a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <span class="footer-logo">Lumière</span>
+    <span>© 2025 Lumière Centro de Estética · Ciudad de México</span>
+    <span>Instagram · WhatsApp · TikTok</span>
+  </footer>
+
+  <!-- ══════════════════════════════════════
+       MODAL — RESERVA
+  ══════════════════════════════════════ -->
+  <div class="modal-overlay" id="modal" onclick="handleOverlayClick(event)">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">×</button>
+      <h2 class="modal-title">Reserva tu cita</h2>
+      <p class="modal-sub">Selecciona tu tratamiento y te contactaremos en menos de 24 h.</p>
+
+      <div class="form-group">
+        <label>Nombre completo</label>
+        <input type="text" placeholder="Tu nombre">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Teléfono</label>
+          <input type="tel" placeholder="+52 55 0000 0000">
+        </div>
+        <div class="form-group">
+          <label>Correo electrónico</label>
+          <input type="email" placeholder="tu@correo.com">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Tratamiento de interés</label>
+        <select>
+          <option value="">Selecciona un tratamiento</option>
+          <option>Ritual Facial Premium</option>
+          <option>Hidratación Profunda</option>
+          <option>Radiofrecuencia Anti-edad</option>
+          <option>Luz Pulsada Intensa</option>
+          <option>Masaje Kobido</option>
+          <option>Peeling Químico / Enzimático</option>
+          <option>Mesoterapia Facial</option>
+          <option>Consulta y diagnóstico de piel</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Fecha preferida</label>
+        <input type="date">
+      </div>
+
+      <button class="btn-primary" style="width:100%;text-align:center;display:block;" onclick="closeModal()">
+        Solicitar mi cita
+      </button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

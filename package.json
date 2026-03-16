@@ -1,0 +1,12 @@
+{
+  "name": "lumiere",
+  "version": "1.0.0",
+  "description": "Lumière — Centro de Estética Premium",
+  "scripts": {
+    "dev": "serve . -l 3000",
+    "start": "serve . -l 3000"
+  },
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}
