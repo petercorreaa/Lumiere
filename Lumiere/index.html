@@ -447,16 +447,7 @@
     height: 38vh;
     pointer-events: none;
     z-index: 800;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgba(240,236,227,.18) 35%,
-      rgba(240,236,227,.55) 65%,
-      rgba(240,236,227,.88) 100%
-    );
-    /* Blur real aplicado via backdrop-filter en un pseudo con clip */
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
+    background: transparent;
     transition: opacity .3s;
   }
 
@@ -473,18 +464,7 @@
   }
   .scroll-veil-blur {
     flex: 1;
-    /* Múltiples capas de blur progresivo usando mask */
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgba(240,236,227,.0) 20%,
-      rgba(240,236,227,.35) 70%,
-      rgba(240,236,227,.7) 100%
-    );
+    background: transparent;
   }
 
   /* ── MODAL RESERVA ── */
@@ -562,6 +542,12 @@
     nav { width: 95%; padding: 14px 20px; }
     .gallery-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 768px) {
+    footer { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 28px 16px; padding-bottom: env(safe-area-inset-bottom, 24px); text-align: center; overflow: visible; }
+    .footer-logo { max-width: 100%; }
+    .cta-wordmark { font-size: clamp(2rem, 8vw, 10rem); }
+    #cta { overflow: visible; }
   }
 </style>
 </head>
