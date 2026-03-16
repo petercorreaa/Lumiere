@@ -72,23 +72,6 @@
   @media (max-width: 480px) {
     .logo { position: static; transform: none; }
   }
-  .nav-menu-btn {
-    width: 42px; height: 42px; border: 1.5px solid rgba(255,255,255,0.7); border-radius: 8px;
-    background: transparent; display: none; align-items: center; justify-content: center;
-     font-size: 1rem; color: #ffffff;
-    transition: background .2s, color .2s;
-  }
-  .nav-menu-btn:hover { background: rgba(255,255,255,0.15); color: #ffffff; }
-  .mobile-nav {
-    position: fixed; top: 0; left: 0; right: 0;
-    transform: translateY(-110%); transition: transform .32s ease;
-    background: linear-gradient(135deg, rgba(62,38,18,0.95), rgba(90,58,28,0.95));
-    z-index: 1500; padding: 88px 16px 24px;
-    display: flex; flex-direction: column; gap: 12px; align-items: center;
-  }
-  .mobile-nav.open { transform: translateY(0); }
-  .mobile-nav a { color: #fff; text-decoration: none; font-size: 1.05rem; text-transform: uppercase; letter-spacing: .08em; padding: 12px 0; width: 100%; text-align: center; }
-  .mobile-nav .close-btn { position: absolute; top: 12px; right: 12px; background: transparent; border: none; color: #fff; font-size: 1.6rem; cursor: pointer; }
 
   /* ── HERO ── */
   #hero {
@@ -572,7 +555,6 @@
   @media (max-width: 768px) {
     nav { width: calc(100% - 32px); left: 50%; transform: translateX(-50%); padding: 12px clamp(16px, 4vw, 28px); margin-top: 12px; }
     .nav-links { display: none; }
-    .nav-menu-btn { display: flex; }
     .logo { position: absolute; left: 50%; transform: translateX(-50%); max-height: 36px; font-size: 1.1rem; }
     footer { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 28px 16px; padding-bottom: env(safe-area-inset-bottom, 24px); text-align: center; overflow: visible; }
     .footer-logo { max-width: 100%; }
@@ -596,15 +578,7 @@
     <a href="#gallery">Galería</a>
   </div>
   <a href="#" class="logo">Lumière</a>
-  <button class="nav-menu-btn" onclick="toggleMobileNav()">≡</button>
 </nav>
-
-<!-- Mobile nav drawer -->
-<div id="mobileNav" class="mobile-nav" aria-hidden="true" style="display:none">
-  <button class="close-btn" onclick="closeMobileNav()">×</button>
-  <a href="#services">Servicios</a>
-  <a href="#gallery">Galería</a>
-</div>
 
 <!-- ── HERO ── -->
 <section id="hero">
@@ -906,24 +880,6 @@
   function openModal()  { document.getElementById('modal').classList.add('open'); document.body.style.overflow = 'hidden'; }
   function closeModal() { document.getElementById('modal').classList.remove('open'); document.body.style.overflow = ''; }
   function handleOverlayClick(e) { if (e.target === document.getElementById('modal')) closeModal(); }
-
-  // Mobile nav drawer
-  function toggleMobileNav() {
-    const nav = document.getElementById('mobileNav');
-    if (!nav) return openModal();
-    const isOpen = nav.style.display === 'flex';
-    nav.style.display = isOpen ? 'none' : 'flex';
-    nav.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
-    document.body.style.overflow = isOpen ? '' : 'hidden';
-  }
-  function closeMobileNav() {
-    const nav = document.getElementById('mobileNav');
-    if (!nav) return;
-    nav.style.display = 'none';
-    nav.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-  document.addEventListener('click', (e) => { if (e.target.closest && e.target.closest('.mobile-nav a')) closeMobileNav(); });
 
   // ── Parallax hero headline ──
   window.addEventListener('scroll', () => {

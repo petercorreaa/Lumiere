@@ -67,16 +67,4 @@ function handleOverlayClick(e) {
   if (e.target === document.getElementById('modal')) closeModal();
 }
 
-/* Mobile nav drawer */
-function toggleMobileNav() {
-  const nav = document.getElementById('mobileNav');
-  if (!nav) return openModal();
-  const isOpen = nav.style.display === 'flex';
-  nav.style.display = isOpen ? 'none' : 'flex';
-  nav.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
-  document.body.style.overflow = isOpen ? '' : 'hidden';
-}
 
-function closeMobileNav() { const nav = document.getElementById('mobileNav'); if (!nav) return; nav.style.display = 'none'; nav.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
-
-document.addEventListener('click', (e) => { if (e.target.closest && e.target.closest('.mobile-nav a')) closeMobileNav(); });
