@@ -583,7 +583,7 @@
 </nav>
 
 <!-- Mobile nav drawer -->
-<div id="mobileNav" class="mobile-nav" aria-hidden="true">
+<div id="mobileNav" class="mobile-nav" aria-hidden="true" style="display:none">
   <button class="close-btn" onclick="closeMobileNav()">×</button>
   <a href="#services">Servicios</a>
   <a href="#gallery">Galería</a>
@@ -896,6 +896,21 @@
     document.querySelector('.hero-headline').style.transform = `translateY(${y * .25}px)`;
     document.querySelector('.hero-bg').style.transform = `translateY(${y * .15}px)`;
   });
+
+  // ── Mobile nav ──
+  function toggleMobileNav() {
+    const nav = document.getElementById('mobileNav');
+    if (!nav) return;
+    const isOpen = nav.style.display === 'flex';
+    nav.style.display = isOpen ? 'none' : 'flex';
+    document.body.style.overflow = isOpen ? '' : 'hidden';
+  }
+  function closeMobileNav() {
+    const nav = document.getElementById('mobileNav');
+    if (!nav) return;
+    nav.style.display = 'none';
+    document.body.style.overflow = '';
+  }
 </script>
 </body>
 </html>
