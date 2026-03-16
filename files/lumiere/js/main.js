@@ -66,3 +66,23 @@ function closeModal() {
 function handleOverlayClick(e) {
   if (e.target === document.getElementById('modal')) closeModal();
 }
+
+/* ── Mobile nav drawer ── */
+function toggleMobileNav() {
+  const nav = document.getElementById('mobileNav');
+  if (!nav) return openModal();
+  const isOpen = nav.classList.toggle('open');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+
+function closeMobileNav() {
+  const nav = document.getElementById('mobileNav');
+  if (!nav) return;
+  nav.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Close mobile nav when a link is clicked
+document.addEventListener('click', (e) => {
+  if (e.target.closest && e.target.closest('.mobile-nav a')) closeMobileNav();
+});

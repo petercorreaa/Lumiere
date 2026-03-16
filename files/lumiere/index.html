@@ -11,6 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -30,8 +33,15 @@
       <a href="#gallery">Galería</a>
     </div>
     <a href="#" class="logo">Lumière</a>
-    <button class="nav-menu-btn" onclick="openModal()">≡</button>
+    <button class="nav-menu-btn" onclick="toggleMobileNav()">≡</button>
   </nav>
+
+  <!-- Mobile nav drawer -->
+  <div id="mobileNav" class="mobile-nav" aria-hidden="true">
+    <button class="close-btn" onclick="closeMobileNav()">×</button>
+    <a href="#services">Servicios</a>
+    <a href="#gallery">Galería</a>
+  </div>
 
   <!-- ══════════════════════════════════════
        HERO

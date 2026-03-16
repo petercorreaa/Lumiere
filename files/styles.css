@@ -637,3 +637,52 @@ body::after {
   .form-row       { grid-template-columns: 1fr; }
   #highlight      { padding: 48px 28px; }
 }
+
+/* ==========================
+   Extra mobile / global fixes
+   ========================== */
+img, picture, video { max-width: 100%; height: auto; display: block; }
+html, body { overflow-x: hidden; }
+
+@media (max-width: 1024px) {
+  :root { }
+}
+
+@media (max-width: 768px) {
+  /* Global spacing to avoid touching edges */
+  nav { width: calc(100% - 32px); left: 50%; transform: translateX(-50%); padding: 12px clamp(16px, 4vw, 28px); margin-top: 12px; }
+
+  /* Navbar: hide desktop links, show hamburger */
+  .nav-links { display: none; }
+  .nav-menu-btn { display: flex; }
+
+  /* Logo sizing and placement */
+  .logo { position: absolute; left: 50%; transform: translateX(-50%); max-height: 36px; font-size: 1.1rem; }
+
+  /* Mobile nav drawer */
+  .mobile-nav {
+    position: fixed; inset: 0 auto auto 0; top: 0; left: 0; right: 0;
+    transform: translateY(-110%); transition: transform .32s ease;
+    background: linear-gradient(135deg, rgba(62,38,18,0.95), rgba(90,58,28,0.95));
+    z-index: 1500; padding: 88px 16px 24px; display: flex; flex-direction: column; gap: 12px;
+    align-items: center;
+  }
+  .mobile-nav.open { transform: translateY(0); }
+  .mobile-nav a { color: #fff; text-decoration: none; font-size: 1.05rem; text-transform: uppercase; letter-spacing: .08em; padding: 12px 0; width: 100%; text-align: center; }
+  .mobile-nav .close-btn { position: absolute; top: 12px; right: 12px; background: transparent; border: none; color: #fff; font-size: 1.6rem; }
+
+  /* Ensure modal and mobile nav don't overflow */
+  .modal, .modal-overlay { padding: 16px; box-sizing: border-box; }
+
+  /* Footer stacking */
+  footer { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 28px 16px; padding-bottom: env(safe-area-inset-bottom, 24px); text-align: center; }
+
+  /* Reduce large decorative orbs / images if present */
+  .orb, .decor-orb { max-width: 60%; transform-origin: center; }
+
+  /* General: single column grids */
+  .services-grid, .stats-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; }
+
+  /* Prevent absolute overflow */
+  .hero-bg, .hero-noise { left: 0; right: 0; }
+}

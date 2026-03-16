@@ -30,8 +30,15 @@
       <a href="#gallery">Galería</a>
     </div>
     <a href="#" class="logo">Lumière</a>
-    <button class="nav-menu-btn" onclick="openModal()">≡</button>
+    <button class="nav-menu-btn" onclick="toggleMobileNav()">≡</button>
   </nav>
+
+  <!-- Mobile nav drawer -->
+  <div id="mobileNav" class="mobile-nav" aria-hidden="true">
+    <button class="close-btn" onclick="closeMobileNav()">×</button>
+    <a href="#services">Servicios</a>
+    <a href="#gallery">Galería</a>
+  </div>
 
   <!-- ══════════════════════════════════════
        HERO
